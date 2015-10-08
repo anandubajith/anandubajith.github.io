@@ -1,0 +1,16 @@
+body {
+  font-family: sans-serif;
+  padding: 2%;
+  max-width:40em;
+  line-height:1.5;
+  color: #414141;
+}
+h1 {
+  font-size: 2em;
+  color: #000;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+
