@@ -1,0 +1,11 @@
+title: Anandu B Ajith
+email: mail@anandu.net
+
+# Build settings
+markdown: kramdown
+theme: ace-theme
+
+# Pagination
+gems: [jekyll-paginate]
+paginate: 5
+paginate_path: '/:num'
