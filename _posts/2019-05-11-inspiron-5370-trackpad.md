@@ -7,19 +7,25 @@ categories: laptop linux ubuntu touchpad
 
 Remove synaptics trackpad driver
 
-`sudo apt remove xserver-xorg-input-synaptics-hwe-18.04`
+```bash
+sudo apt remove xserver-xorg-input-synaptics-hwe-18.04
+```
 
 Install libinput driver
 
-`sudo apt install xserver-xorg-input-libinput-hwe-18.04`
+```bash
+sudo apt install xserver-xorg-input-libinput-hwe-18.04
+```
 
 Edit the config file to use libinput driver
 
-`sudo nano /usr/share/X11/xorg.conf.d/*-libinput.conf`
+```bash
+sudo nano /usr/share/X11/xorg.conf.d/*-libinput.conf
+```
 
 It should look something like this
 
-```
+```conf
 Section "InputClass"
         Identifier "libinput touchpad catchall"
         MatchIsTouchpad "on"
@@ -32,7 +38,7 @@ EndSection
 
 Now time to install **libinput-gestures**
 
-```
+```sh
 git clone http://github.com/bulletmark/libinput-gestures
 cd libinput-gestures
 sudo make install
@@ -43,7 +49,7 @@ libinput-gestures-setup autostart # make it start on boot
 
 Configure the gestures by editing **~/.config/libinput-gestures.conf**
 
-```
+```conf
 # Move to workspace up/down/left/right
 gesture swipe up    4    xdotool key ctrl+alt+Down     
 gesture swipe down  4    xdotool key ctrl+alt+Up  
