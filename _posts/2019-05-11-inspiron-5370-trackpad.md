@@ -15,7 +15,7 @@ Install libinput driver
 
 Edit the config file to use libinput driver
 
-`sudo nano /usr/share/X11/xorg.conf.d/\*-libinput.conf`
+`sudo nano /usr/share/X11/xorg.conf.d/*-libinput.conf`
 
 It should look something like this
 
