@@ -2,7 +2,7 @@
 layout: post
 title:  "Setting up Inspiron 5370 Touchpad gestures on Linux"
 date:   2019-05-11 17:00:05 +0530
-categories: jekyll update
+categories: laptop linux ubuntu touchpad 
 ---
 
 Remove synaptics trackpad driver
