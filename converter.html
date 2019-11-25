@@ -115,6 +115,12 @@ select {
 			min-width: 720px; 
 			max-width:50%;
 		}
+		button {
+			background: #000;
+			color:#fff;
+			border:0;
+			padding:0.25em;
+		}
 	</style>
 </head>
 <body>
@@ -123,11 +129,12 @@ select {
 		<div>
 			<select>
 			    <option selected disabled value="-1">Select Bit Width</option>
-			    <option value="16">16 Bit</option>
-			    <option value="32">32 Bit</option>
+			    <option value="16">16 Bit (input)</option>
+			    <option value="32">32 Bit (output)</option>
 			</select>
 		</div>
 		<input type="text" name="binary" class="binary" placeholder="Enter binary number">
+		<button class="calculateButton">Calculate</button>
 		<div class="result"></div>
 	</div>
 	<script>
@@ -149,7 +156,7 @@ select {
 				alert("Select Bit width");
 				return;
 			}
-			if (bits.length != 16 && bits.length != 32){
+			if (bits.length != bitWidth){
 				resText = `Input size mismatch<br>Expected <b>${bitWidth}</b> found <b>${bits.length}</b>`;
 				resultDiv.innerHTML = resText;
 				resultDiv.classList.add('error')
@@ -174,7 +181,8 @@ select {
 		let bitSelect = document.querySelector('select');
 		let binary = document.querySelector('.binary');
 		let resultDiv = document.querySelector('.result');
-		binary.addEventListener('keyup', calcuate);
+		let calcuateButton = document.querySelector('.calculateButton');
+		calcuateButton.addEventListener('click', calcuate);
 	</script>
 </body>
 </html>
